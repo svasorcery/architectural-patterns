@@ -22,6 +22,9 @@ namespace ApiGateway.Clients.MvcAngular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Services.SampleValuesApiClientOptions>(Configuration.GetSection("SampleValuesApi"));
+            services.AddSingleton<Services.SampleValuesApiClient>();
+
             services.AddMvc();
         }
 
