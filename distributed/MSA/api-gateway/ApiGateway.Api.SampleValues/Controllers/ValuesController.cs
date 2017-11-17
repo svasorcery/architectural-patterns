@@ -31,7 +31,7 @@ namespace ApiGateway.Api.SampleValues.Controllers
         }
         
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get(int id)
+        public async Task<IActionResult> Get([FromRoute]int id)
         {
             _logger.LogInformation("Requesting value {Id}", id);
 
@@ -61,7 +61,7 @@ namespace ApiGateway.Api.SampleValues.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put([FromQuery]int id, [FromBody]SampleValueService.SampleValue value)
+        public async Task<IActionResult> Put([FromRoute]int id, [FromBody]SampleValueService.SampleValue value)
         {
             if (value == null)
             {
@@ -76,7 +76,7 @@ namespace ApiGateway.Api.SampleValues.Controllers
         }
         
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete([FromQuery]int id)
+        public async Task<IActionResult> Delete([FromRoute]int id)
         {
             _logger.LogInformation("Deleting value {Id}", id);
 
