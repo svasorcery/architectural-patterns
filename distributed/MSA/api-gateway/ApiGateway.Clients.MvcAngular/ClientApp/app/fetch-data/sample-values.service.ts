@@ -28,8 +28,21 @@ export class SampleValuesService {
             .map((response: any) => response.json() as SampleValue);
     }
 
+    editItem(id: number, value: SampleValue): Observable<SampleValue> {
+        return this._http.put(`${this._url}/${id}`, value)
+            .map((response: any) => response.json() as SampleValue);
+    }
+
+
+    gotoList() {
+        this._router.navigate(['fetch-data']);
+    }
 
     gotoDetails(id: number) {
         this._router.navigate(['fetch-data', 'details', id]);
+    }
+
+    gotoEdit(id: number) {
+        this._router.navigate(['fetch-data', 'edit', id]);
     }
 }

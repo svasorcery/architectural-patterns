@@ -5,10 +5,10 @@ import { SampleValuesService } from './sample-values.service';
 import { SampleValue } from './sample-values.models';
 
 @Component({
-    templateUrl: './details.component.html'
+    templateUrl: './edit.component.html'
 })
 
-export class DetailsComponent implements OnInit {
+export class EditComponent implements OnInit {
     value: SampleValue;
 
     constructor(
@@ -26,10 +26,11 @@ export class DetailsComponent implements OnInit {
         );
     }
 
-    editItem() {
-        if(!this.value)
-            return;
-            
-        this._valuesService.gotoEdit(this.value.id);
+    submit() {
+        this._valuesService.editItem(this.value.id, this.value)
+            .subscribe(
+                result => this._valuesService.gotoList(),
+                error => console.log(error)
+            );
     }
 }

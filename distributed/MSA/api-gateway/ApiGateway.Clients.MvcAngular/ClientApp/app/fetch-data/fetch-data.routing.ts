@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FetchDataComponent } from './fetch-data.component';
 import { ListComponent } from './list.component';
 import { DetailsComponent } from './details.component';
+import { EditComponent } from './edit.component';
 
 const routes: Routes = [
     { 
@@ -22,6 +23,10 @@ const routes: Routes = [
             {
                 path: 'details/:id',
                 component: DetailsComponent
+            },
+            {
+                path: 'edit/:id',
+                component: EditComponent
             }
         ] 
     },
@@ -40,5 +45,6 @@ export class FetchDataRoutingModule { }
 export const fetchDataComponents = [
     FetchDataComponent,
     ListComponent,
-    DetailsComponent
+    DetailsComponent,
+    EditComponent
 ];
