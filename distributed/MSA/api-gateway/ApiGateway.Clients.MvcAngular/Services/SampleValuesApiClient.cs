@@ -31,6 +31,6 @@ namespace ApiGateway.Clients.MvcAngular.Services
 
         public Task<SampleValue> UpdateAsync(int id, SampleValue p) => Put<SampleValue, SampleValue>($"api/values/{id}", p);
 
-        public Task DeleteAsync(int id) => Delete($"api/values{id}");
+        public Task DeleteAsync(int id) => Delete($"api/values/{id}");
     }
 }

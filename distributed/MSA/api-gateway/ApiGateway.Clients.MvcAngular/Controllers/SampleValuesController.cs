@@ -58,7 +58,7 @@ namespace ApiGateway.Clients.MvcAngular.Controllers
         public async Task<IActionResult> Delete([FromRoute]int id)
         {
             await _client.DeleteAsync(id);
-            return Ok();
+            return Ok(true);
         }
     }
 }
