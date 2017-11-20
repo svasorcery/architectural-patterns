@@ -2,11 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FetchDataComponent } from './fetch-data.component';
-
 const routes: Routes = [
     { 
         path: 'fetch-data', 
-        component: FetchDataComponent 
+        component: FetchDataComponent
     },
 ];
 
@@ -20,6 +19,6 @@ const routes: Routes = [
 })
 export class FetchDataRoutingModule { }
 
-export const routedComponents = [
+export const fetchDataComponents = [
     FetchDataComponent
 ];

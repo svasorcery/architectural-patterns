@@ -1,18 +1,20 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { FetchDataRoutingModule } from './fetch-data.routing';
+import { FetchDataRoutingModule, fetchDataComponents } from './fetch-data.routing';
+import { SampleValuesService } from './sample-values.service';
 
-import { FetchDataComponent } from './fetch-data.component';
 
 @NgModule({
     imports: [
+        CommonModule,
         FetchDataRoutingModule
     ],
     declarations: [
-        FetchDataComponent
+        ...fetchDataComponents
     ],
     providers: [
-
+        SampleValuesService
     ],
     exports: [
         

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppModuleShared } from './app.shared.module';
 import { AppComponent } from './components/app/app.component';
@@ -10,7 +10,8 @@ import { AppComponent } from './components/app/app.component';
         AppModuleShared
     ],
     providers: [
-        { provide: 'BASE_URL', useFactory: getBaseUrl }
+        { provide: 'BASE_URL', useFactory: getBaseUrl },
+        { provide: LOCALE_ID, useValue: 'ru-RU' },
     ]
 })
 export class AppModule {

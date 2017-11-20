@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
     selector: 'fetch-data',
     template: `
         <h2>Sample Values</h2>
+        <router-outlet></router-outlet>
     `
 })
 
