@@ -32,4 +32,13 @@ export class DetailsComponent implements OnInit {
             
         this._valuesService.gotoEdit(this.value.id);
     }
+
+    deleteItem() {
+        if(!this.value)
+            return;
+
+        if (confirm(`Are you sure want to delete \'${this.value.name}\'?`)) { 
+            this._valuesService.deleteItem(this.value.id);
+        }
+    }
 }

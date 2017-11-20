@@ -38,6 +38,14 @@ export class SampleValuesService {
             .map((response: any) => response.json() as SampleValue);
     }
 
+    deleteItem(id: number) {
+        return this._http.delete(`${this._url}/${id}`)
+            .subscribe(
+                result => this.gotoList(),
+                error => console.log(error)
+            );
+    }
+
 
     gotoList() {
         this._router.navigate(['fetch-data']);
