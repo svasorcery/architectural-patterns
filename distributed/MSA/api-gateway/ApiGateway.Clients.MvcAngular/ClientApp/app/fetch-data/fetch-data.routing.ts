@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { FetchDataComponent } from './fetch-data.component';
 import { ListComponent } from './list.component';
 import { DetailsComponent } from './details.component';
+import { SampleValuesFormComponent } from './form.component';
 import { EditComponent } from './edit.component';
 
 const routes: Routes = [
@@ -46,5 +47,6 @@ export const fetchDataComponents = [
     FetchDataComponent,
     ListComponent,
     DetailsComponent,
+    SampleValuesFormComponent,
     EditComponent
 ];

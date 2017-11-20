@@ -1,0 +1,80 @@
+<form #form="ngForm" novalidate (submit)="submit()" *ngIf="value" class="col-md-9">
+    <div class="form-group">
+        <label>Code</label>
+        <input type="text"
+            [(ngModel)]="value.code"
+            required
+            minlength="3"
+            maxlength="10"
+            placeholder="Enter value code"
+            name="code"
+            class="form-control"
+        />
+    </div>
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text"
+            [(ngModel)]="value.name"
+            required
+            minlength="5"
+            maxlength="25"
+            placeholder="Enter value name"
+            name="name"
+            class="form-control"
+        />
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea
+            [(ngModel)]="value.description"
+            rows="5"
+            minlength="5"
+            maxlength="300"
+            placeholder="Enter value description"
+            name="description"
+            class="form-control"
+        ></textarea>
+    </div>
+    <div>
+        <label>Author</label>
+        <div class="form-group">
+            <input type="text"
+                required
+                minlength="2"
+                maxlength="25"
+                [(ngModel)]="value.created.by.lastName"
+                placeholder="Enter author last name"
+                name="created.by.lastName"
+                class="form-control"
+            />
+        </div>
+        <div class="form-group">
+            <input type="text"
+                required
+                minlength="2"
+                maxlength="25"
+                [(ngModel)]="value.created.by.firstName"
+                placeholder="Enter author first name"
+                name="created.by.firstName"
+                class="form-control"
+            />
+        </div>
+        <div class="form-group">
+            <input type="text"
+                [(ngModel)]="value.created.by.middleName"
+                minlength="5"
+                maxlength="25"
+                placeholder="Enter author middle name"
+                name="created.by.middleName"
+                class="form-control"
+            />
+        </div>
+    </div>
+
+    <div class="pull-right">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-primary ">Submit</button>
+    </div>
+
+    <div class="clearfix"></div><br />
+    {{ form.value | json }}
+</form>

@@ -26,7 +26,11 @@ export class EditComponent implements OnInit {
         );
     }
 
-    submit() {
+    submit(value: SampleValue) {
+        if (!value)
+            return;
+
+        this.value = value;
         this._valuesService.editItem(this.value.id, this.value)
             .subscribe(
                 result => this._valuesService.gotoList(),
