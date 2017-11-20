@@ -6,10 +6,10 @@
         <th>Created</th>
     </tr>
 
-    <tr *ngFor="let value of values">
+    <tr *ngFor="let value of values" (click)="selectItem(value.id)" style="cursor:pointer">
         <td>{{ value.id }}</td>
         <td>{{ value.name }}</td>
-        <td>{{ value.created.by.fullName }}</td>
-        <td>{{ value.created.at | date: 'dd.MM.yyyy HH.mm' }}</td>
+        <td>{{ value.created.by.lastName }}</td>
+        <td>{{ value.created.at | date: 'dd.MM.yyyy' }}</td>
     </tr>
 </table>

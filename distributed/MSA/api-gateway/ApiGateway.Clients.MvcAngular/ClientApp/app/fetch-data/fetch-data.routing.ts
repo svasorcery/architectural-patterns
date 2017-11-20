@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FetchDataComponent } from './fetch-data.component';
 import { ListComponent } from './list.component';
+import { DetailsComponent } from './details.component';
 
 const routes: Routes = [
     { 
@@ -17,6 +18,10 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ListComponent
+            },
+            {
+                path: 'details/:id',
+                component: DetailsComponent
             }
         ] 
     },
@@ -34,5 +39,6 @@ export class FetchDataRoutingModule { }
 
 export const fetchDataComponents = [
     FetchDataComponent,
-    ListComponent
+    ListComponent,
+    DetailsComponent
 ];

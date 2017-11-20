@@ -21,4 +21,8 @@ export class ListComponent implements OnInit {
                 error => console.log(error)
             )
     }
+
+    selectItem(id: number) {
+        this._valuesService.gotoDetails(id);
+    }
 }
