@@ -10,16 +10,11 @@ import { EditComponent } from './edit.component';
 
 const routes: Routes = [
     { 
-        path: 'fetch-data', 
+        path: 'values', 
         component: FetchDataComponent,
         children: [
             {
                 path: '',
-                redirectTo: 'list',
-                pathMatch: 'full'
-            },
-            {
-                path: 'list',
                 component: ListComponent
             },
             {
@@ -27,11 +22,11 @@ const routes: Routes = [
                 component: CreateComponent
             },
             {
-                path: 'details/:id',
+                path: ':id',
                 component: DetailsComponent
             },
             {
-                path: 'edit/:id',
+                path: ':id/edit',
                 component: EditComponent
             }
         ] 

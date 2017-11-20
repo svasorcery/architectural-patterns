@@ -48,18 +48,18 @@ export class SampleValuesService {
 
 
     gotoList() {
-        this._router.navigate(['fetch-data']);
+        this._router.navigate(['values']);
     }
 
     gotoDetails(id: number) {
-        this._router.navigate(['fetch-data', 'details', id]);
+        this._router.navigate(['values', id]);
     }
 
     gotoCreate() {
-        this._router.navigate(['fetch-data', 'create']);
+        this._router.navigate(['values', 'create']);
     }
 
     gotoEdit(id: number) {
-        this._router.navigate(['fetch-data', 'edit', id]);
+        this._router.navigate(['values', id, 'edit']);
     }
 }
