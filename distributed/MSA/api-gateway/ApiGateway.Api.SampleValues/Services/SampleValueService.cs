@@ -29,7 +29,8 @@ namespace ApiGateway.Api.SampleValues.Services
 
         public Task<SampleValue> CreateValueAsync(SampleValue value)
         {
-            value.Id = _values.Last().Id + 1;
+            value.Id = _values.Count > 0 ? _values.Last().Id + 1 : 10001;
+            value.Created.At = DateTime.Now;
 
             _values.Add(value);
 
@@ -50,7 +51,9 @@ namespace ApiGateway.Api.SampleValues.Services
 
         public Task DeleteValueAsync(int id)
         {
-            _values.RemoveAt(id);
+            var delete = _values.FirstOrDefault(v => v.Id == id);
+
+            _values.RemoveAt(_values.IndexOf(delete));
             
             return Task.FromResult(0);
         }

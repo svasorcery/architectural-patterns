@@ -1,0 +1,29 @@
+<div *ngIf="value">
+
+    <div class="pull-right">
+        <button (click)="editItem()" class="btn btn-success">Edit</button>
+        <button (click)="deleteItem()" class="btn btn-danger">Delete</button>
+    </div>
+
+    <div>
+        <label>Code</label>
+        <span>{{ value.code }}</span>
+    </div>
+    <div>
+        <label>Name</label>
+        <span>{{ value.name }}</span>
+    </div>
+    <div>
+        <label>Description</label>
+        <span>{{ value.description }}</span>
+    </div>
+    <div>
+        <label>Author</label>
+        <span>{{ value.created.by.fullName }}</span>
+    </div>
+    <div>
+        <label>Created</label>
+        <span>{{ value.created.at | date: 'dd.MM.yyyy HH:mm:ss' }}</span>
+    </div>
+
+</div>
