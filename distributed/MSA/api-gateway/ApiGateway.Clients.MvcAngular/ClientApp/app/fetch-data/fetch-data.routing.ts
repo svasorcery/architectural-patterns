@@ -5,6 +5,7 @@ import { FetchDataComponent } from './fetch-data.component';
 import { ListComponent } from './list.component';
 import { DetailsComponent } from './details.component';
 import { SampleValuesFormComponent } from './form.component';
+import { CreateComponent } from './create.component';
 import { EditComponent } from './edit.component';
 
 const routes: Routes = [
@@ -20,6 +21,10 @@ const routes: Routes = [
             {
                 path: 'list',
                 component: ListComponent
+            },
+            {
+                path: 'create',
+                component: CreateComponent
             },
             {
                 path: 'details/:id',
@@ -48,5 +53,6 @@ export const fetchDataComponents = [
     ListComponent,
     DetailsComponent,
     SampleValuesFormComponent,
+    CreateComponent,
     EditComponent
 ];

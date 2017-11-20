@@ -25,4 +25,8 @@ export class ListComponent implements OnInit {
     selectItem(id: number) {
         this._valuesService.gotoDetails(id);
     }
+
+    createItem() {
+        this._valuesService.gotoCreate();
+    }
 }

@@ -3,11 +3,11 @@ export class SampleValue {
     code: string;
     name: string;
     description: string;
-    created: SampleEvent;
+    created: SampleEvent = new SampleEvent();
 }
 
 export class SampleEvent {
-    by: SamplePerson;
+    by: SamplePerson = new SamplePerson();
     at: Date;
 }
 
