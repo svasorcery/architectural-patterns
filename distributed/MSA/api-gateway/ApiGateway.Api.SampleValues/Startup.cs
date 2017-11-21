@@ -1,13 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ApiGateway.Api.SampleValues
 {
@@ -23,8 +26,10 @@ namespace ApiGateway.Api.SampleValues
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<Models.Authentication.JwtAuthenticationOptions>(Configuration.GetSection("Authentication:JwtBearerToken"));
+                        
             services.AddSingleton<Services.SampleValueService>();
-
+            
             services.AddMvc();
         }
 
