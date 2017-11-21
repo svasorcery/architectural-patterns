@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api.SampleValues
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Clients.MvcAngular", "ApiGateway.Clients.MvcAngular\ApiGateway.Clients.MvcAngular.csproj", "{99BB4B94-865E-4DBB-8845-D56D1CAA12A8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api.Authentication.JwtBearer", "ApiGateway.Api.Authentication.JwtBearer\ApiGateway.Api.Authentication.JwtBearer.csproj", "{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,18 @@ Global
 		{99BB4B94-865E-4DBB-8845-D56D1CAA12A8}.Release|x64.Build.0 = Release|Any CPU
 		{99BB4B94-865E-4DBB-8845-D56D1CAA12A8}.Release|x86.ActiveCfg = Release|Any CPU
 		{99BB4B94-865E-4DBB-8845-D56D1CAA12A8}.Release|x86.Build.0 = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|x64.Build.0 = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Debug|x86.Build.0 = Debug|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|x64.ActiveCfg = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|x64.Build.0 = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|x86.ActiveCfg = Release|Any CPU
+		{9714AC5A-6FA1-4A74-8D0F-17E27B0E742F}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

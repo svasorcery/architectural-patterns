@@ -1,16 +1,8 @@
-﻿using System;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
 
 namespace ApiGateway.Api.SampleValues
 {
@@ -26,24 +18,7 @@ namespace ApiGateway.Api.SampleValues
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<Models.Authentication.JwtAuthenticationOptions>(Configuration.GetSection("Authentication:JwtBearerToken"));
-            
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                    .AddJwtBearer(options =>
-                    {
-                        options.RequireHttpsMetadata = false;
-                        options.TokenValidationParameters = new TokenValidationParameters
-                        {
-                            ValidateIssuer = true,
-                            ValidIssuer = Configuration["Authentication:JwtBearerToken:Issuer"],
-                            ValidateAudience = true,
-                            ValidAudience = Configuration["Authentication:JwtBearerToken:Audience"],
-                            ValidateIssuerSigningKey = true,
-                            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Authentication:JwtBearerToken:SignInKey"])),
-                            ValidateLifetime = true,
-                            ClockSkew = TimeSpan.Zero
-                        };
-                    });
+            services.AddJwtBearerAuthentication(Configuration.GetSection("Authentication:JwtBearer"));
 
             services.AddSingleton<Services.SampleValueService>();
             

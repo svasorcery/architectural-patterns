@@ -1,43 +1,43 @@
 ﻿using System;
-using System.Text;
-using System.Linq;
 using System.Threading.Tasks;
 using System.Security.Claims;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace ApiGateway.Api.SampleValues.Controllers
 {
-    using ApiGateway.Api.SampleValues.Models.Authentication;
+    using ApiGateway.Api.Authentication.JwtBearer.Models;
+    using ApiGateway.Api.Authentication.JwtBearer.Services;
 
-    public class AccountController : Controller
+    public class JwtTokenController : Controller
     {
-        private readonly List<UserAccount> _users = new List<UserAccount>
-        {
-            new UserAccount { Username = "svasorcery", Password = "gfhjkm123", Role = "admin" },
-            new UserAccount { Username = "user", Password = "user", Role = "user" }
-        };
+        private readonly JwtBearerAuthenticationOptions _authOptions;
+        private readonly UserAccountService _users;
+        private readonly ILogger _logger;
 
-        private readonly JwtAuthenticationOptions _authOptions;
-
-        public AccountController(IOptions<JwtAuthenticationOptions> optionsAccessor)
+        public JwtTokenController(
+            IOptions<JwtBearerAuthenticationOptions> optionsAccessor, 
+            UserAccountService users,
+            ILogger<JwtTokenController> logger
+            )
         {
             _authOptions = optionsAccessor.Value;
+            _users = users;
+            _logger = logger;
         }
 
 
-        [HttpPost("/token")]
-        public IActionResult Token([FromBody]UserCredentials credentials)
+        [HttpPost("/access-token")]
+        public async Task<IActionResult> AccessToken([FromBody]UserCredentials credentials)
         {
-            var identity = GetIdentity(credentials.Username, credentials.Password);
+            var identity = await GetIdentityAsync(credentials);
 
             if (identity == null)
             {
+                _logger.LogInformation($"Invalid username '{credentials.Username}' or password '{credentials.Password}'");
                 return BadRequest("Could not verify username and password");
             }
 
@@ -46,27 +46,25 @@ namespace ApiGateway.Api.SampleValues.Controllers
             var jwt = new JwtSecurityToken(
                     issuer: _authOptions.Issuer,
                     audience: _authOptions.Audience,
-                    notBefore: now,
-                    expires: now.Add(TimeSpan.FromSeconds(_authOptions.LifeTime)),
                     claims: identity.Claims,
-                    signingCredentials: new SigningCredentials(
-                        new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_authOptions.SignInKey)), 
-                        SecurityAlgorithms.HmacSha256
-                    )
+                    notBefore: _authOptions.NotBefore,
+                    expires: _authOptions.Expiration,
+                    signingCredentials: _authOptions.SigningCredentials
             );
 
             var encodedJwt = new JwtSecurityTokenHandler().WriteToken(jwt);
             
             return Ok(new
             {
-                username = identity.Name,
+                subject = identity.Name,
+                expires_in = (int)_authOptions.ValidFor.TotalSeconds,
                 access_token = encodedJwt
             });
         }
 
-        private ClaimsIdentity GetIdentity(string username, string password)
+        private async Task<ClaimsIdentity> GetIdentityAsync(UserCredentials credentials)
         {
-            var person = _users.FirstOrDefault(x => x.Username == username && x.Password == password);
+            var person = await _users.FindAsync(credentials);
 
             if (person != null)
             {
