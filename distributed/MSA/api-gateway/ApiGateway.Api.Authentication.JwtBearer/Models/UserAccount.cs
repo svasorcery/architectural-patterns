@@ -1,4 +1,4 @@
-﻿namespace ApiGateway.Api.SampleValues.Models.Authentication
+﻿namespace ApiGateway.Api.Authentication.JwtBearer.Models
 {
     public class UserAccount
     {

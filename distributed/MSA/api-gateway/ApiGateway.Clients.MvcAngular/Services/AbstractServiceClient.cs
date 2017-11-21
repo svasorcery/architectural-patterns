@@ -1,10 +1,8 @@
 ﻿using System;
 using System.IO;
-using System.Linq;
-using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+using System.Net.Http.Headers;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
@@ -36,6 +34,25 @@ namespace ApiGateway.Clients.MvcAngular.Services
             _client.BaseAddress = new Uri(BaseUrl.EndsWith("/") ? BaseUrl : BaseUrl + "/");
         }
 
+
+        public async Task<HttpClient> GetClient()
+        {
+            using (var writer = new StringWriter())
+            {
+                _json.Serialize(writer, new { Username = "svasorcery", Password = "gfhjkm123" });
+
+                var response = await _client.PostAsync(
+                    "access-token",
+                    new StringContent(writer.GetStringBuilder().ToString(), System.Text.Encoding.UTF8, "application/json")
+                );
+
+                var tokenResponse = await ReadAs<TokenResponse>(response.Content);
+
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", tokenResponse.AccessToken);
+
+                return _client;
+            }
+        }
         
         public async Task<T> ReadAs<T>(HttpContent content)
         {
@@ -58,8 +75,10 @@ namespace ApiGateway.Clients.MvcAngular.Services
 
         protected async Task<T> Get<T>(string url)
         {
+            var client = await GetClient();
+
             _logger.LogInformation("GET {BaseUrl}/{Url}", BaseUrl, url);
-            var response = await _client.GetAsync(url);
+            var response = await client.GetAsync(url);
 
             if (response.IsSuccessStatusCode == false)
             {
@@ -75,12 +94,14 @@ namespace ApiGateway.Clients.MvcAngular.Services
 
         protected async Task<TOut> Post<TOut, TIn>(string url, TIn p)
         {
+            var client = await GetClient();
+
             _logger.LogInformation("POST {BaseUrl}/{Url}", BaseUrl, url);
 
             using (var writer = new StringWriter())
             {
                 _json.Serialize(writer, p);
-                var response = await _client.PostAsync(
+                var response = await client.PostAsync(
                     url, 
                     new StringContent(writer.GetStringBuilder().ToString(), System.Text.Encoding.UTF8, "application/json")
                 );
@@ -100,12 +121,14 @@ namespace ApiGateway.Clients.MvcAngular.Services
 
         protected async Task<TOut> Put<TOut, TIn>(string url, TIn p)
         {
+            var client = await GetClient();
+
             _logger.LogInformation("PUT {BaseUrl}/{Url}", BaseUrl, url);
 
             using (var writer = new StringWriter())
             {
                 _json.Serialize(writer, p);
-                var response = await _client.PutAsync(
+                var response = await client.PutAsync(
                     url,
                     new StringContent(writer.GetStringBuilder().ToString(), System.Text.Encoding.UTF8, "application/json")
                 );
@@ -125,8 +148,10 @@ namespace ApiGateway.Clients.MvcAngular.Services
 
         protected async Task Delete(string url)
         {
+            var client = await GetClient();
+
             _logger.LogInformation("DELETE {BaseUrl}/{Url}", BaseUrl, url);
-            var response = await _client.DeleteAsync(url);
+            var response = await client.DeleteAsync(url);
 
             if (response.IsSuccessStatusCode == false)
             {
