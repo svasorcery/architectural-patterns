@@ -1,7 +1,7 @@
 # Software Architectural Patterns
 
-## [Distributed Systems](distributed/README.md)
+## [Distributed Systems](distributed)
 
-### [Micro-Services Architecture (MSA)](distributed/MSA/README.md)
+### [Micro-Services Architecture (MSA)](distributed/MSA)
 
-* #### [API Gateway](distributed/MSA/api-gateway/README.md)
+* #### [API Gateway](distributed/MSA/api-gateway)
