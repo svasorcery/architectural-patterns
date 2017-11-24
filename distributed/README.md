@@ -1,3 +1,3 @@
 # Distributed Systems
-## [Micro-Services Architecture](MSA/README.md)
-* ### [API Gateway](MSA/api-gateway/README.md)
+## [Micro-Services Architecture](MSA)
+* ### [API Gateway](MSA/api-gateway)
