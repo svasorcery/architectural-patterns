@@ -1,5 +1,6 @@
 # Micro-Services Architecture (MSA)
 - ### [API Gateway](api-gateway)
+* ### [Access Token](access-token)
 
 ---
 
@@ -22,7 +23,7 @@ There are many patterns related to the microservices pattern. The Monolithic arc
   - **Service Component Test**
   - **Service Integration Contract Test**
 - **Circuit Breaker**
-- **Access Token**
+- **[Access Token](access-token)**
 - Observability patterns:
   - **Log aggregation**
   - **Application metrics**
