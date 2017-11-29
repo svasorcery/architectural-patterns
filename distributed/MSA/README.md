@@ -5,6 +5,8 @@
 
 There are many patterns related to the microservices pattern. The Monolithic architecture is an alternative to the microservice architecture. The other patterns address issues that you will encounter when applying the microservice architecture.
 
+![Microservices](http://microservices.io/i/PatternsRelatedToMicroservices.jpg)
+
 - Decomposition patterns
   - **Decompose by business capability**
   - **Decompose by subdomain**
