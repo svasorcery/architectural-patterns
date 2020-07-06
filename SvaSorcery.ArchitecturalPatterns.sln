@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 15.0.26124.0
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Distribution", "Distribution", "{8BCE6C94-2E38-4D36-8BB2-48932E234049}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MSA", "MSA", "{CA087C6A-A47B-4CE1-A44E-B1BA398EB08D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AccessToken", "AccessToken", "{FB1A7E4B-3E9B-46C6-9FC9-89E9ADC16649}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessToken.Api.JwtBearer", "Distribution\MSA\AccessToken\AccessToken.Api.JwtBearer\AccessToken.Api.JwtBearer.csproj", "{43F77D8B-A080-4396-B29C-5D54C4D5C6C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateway", "ApiGateway", "{A058E02B-EB04-4FB3-BB6F-96BC85282E22}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api.Authentication.JwtBearer", "Distribution\MSA\ApiGateway\ApiGateway.Api.Authentication.JwtBearer\ApiGateway.Api.Authentication.JwtBearer.csproj", "{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Api.SampleValues", "Distribution\MSA\ApiGateway\ApiGateway.Api.SampleValues\ApiGateway.Api.SampleValues.csproj", "{C11690CD-1D2C-4FED-B49E-3FF6E080BE83}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Clients.MvcAngular", "Distribution\MSA\ApiGateway\ApiGateway.Clients.MvcAngular\ApiGateway.Clients.MvcAngular.csproj", "{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteFacade", "RemoteFacade", "{2AAF5EE5-B605-4F3A-931B-9F8B0B540E5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{43F77D8B-A080-4396-B29C-5D54C4D5C6C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F77D8B-A080-4396-B29C-5D54C4D5C6C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F77D8B-A080-4396-B29C-5D54C4D5C6C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F77D8B-A080-4396-B29C-5D54C4D5C6C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CA087C6A-A47B-4CE1-A44E-B1BA398EB08D} = {8BCE6C94-2E38-4D36-8BB2-48932E234049}
+		{FB1A7E4B-3E9B-46C6-9FC9-89E9ADC16649} = {CA087C6A-A47B-4CE1-A44E-B1BA398EB08D}
+		{43F77D8B-A080-4396-B29C-5D54C4D5C6C3} = {FB1A7E4B-3E9B-46C6-9FC9-89E9ADC16649}
+		{A058E02B-EB04-4FB3-BB6F-96BC85282E22} = {CA087C6A-A47B-4CE1-A44E-B1BA398EB08D}
+		{84632468-9DB5-4FF8-AA4A-ED123DDC5DD4} = {A058E02B-EB04-4FB3-BB6F-96BC85282E22}
+		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83} = {A058E02B-EB04-4FB3-BB6F-96BC85282E22}
+		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879} = {A058E02B-EB04-4FB3-BB6F-96BC85282E22}
+		{2AAF5EE5-B605-4F3A-931B-9F8B0B540E5A} = {8BCE6C94-2E38-4D36-8BB2-48932E234049}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
+	EndGlobalSection
+EndGlobal
