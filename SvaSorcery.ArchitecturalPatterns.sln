@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway.Clients.MvcAngul
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RemoteFacade", "RemoteFacade", "{2AAF5EE5-B605-4F3A-931B-9F8B0B540E5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade", "Distribution\RemoteFacade\SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade\SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade.csproj", "{EF570C75-B067-4A11-BDEF-535F5A0CE840}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF570C75-B067-4A11-BDEF-535F5A0CE840}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF570C75-B067-4A11-BDEF-535F5A0CE840}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF570C75-B067-4A11-BDEF-535F5A0CE840}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF570C75-B067-4A11-BDEF-535F5A0CE840}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,6 +62,7 @@ Global
 		{C11690CD-1D2C-4FED-B49E-3FF6E080BE83} = {A058E02B-EB04-4FB3-BB6F-96BC85282E22}
 		{F33F7645-3ABE-4EF3-AC54-5BD0B0C82879} = {A058E02B-EB04-4FB3-BB6F-96BC85282E22}
 		{2AAF5EE5-B605-4F3A-931B-9F8B0B540E5A} = {8BCE6C94-2E38-4D36-8BB2-48932E234049}
+		{EF570C75-B067-4A11-BDEF-535F5A0CE840} = {2AAF5EE5-B605-4F3A-931B-9F8B0B540E5A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
