@@ -21,18 +21,18 @@ namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache
 
         public virtual T Get(int id) => _cache.Get(id);
 
-        public void Put(T item)
+        public virtual void Put(T item)
         {
             _dataAccessor.CreateOrUpdate(item);
             _cache.Put(item);
         }
 
-        public void Remove(int id)
+        public virtual void Remove(int id)
         {
             _dataAccessor.RemoveById(id);
             _cache.Remove(id);
         }
 
-        public void Clear() => _cache.Clear();
+        public virtual void Clear() => _cache.Clear();
     }
 }
