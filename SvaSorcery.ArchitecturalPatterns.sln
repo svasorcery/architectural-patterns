@@ -39,6 +39,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.DataAccess.TableDataGateway", "Enterprise\DataAccess\SvaSorcery.Patterns.Enterprise.DataAccess.TableDataGateway\SvaSorcery.Patterns.Enterprise.DataAccess.TableDataGateway.csproj", "{7D650DF2-AD3A-42A2-8A13-53CED882B07D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.DataAccess.RowDataGateway", "Enterprise\DataAccess\SvaSorcery.Patterns.Enterprise.DataAccess.RowDataGateway\SvaSorcery.Patterns.Enterprise.DataAccess.RowDataGateway.csproj", "{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{7D650DF2-AD3A-42A2-8A13-53CED882B07D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D650DF2-AD3A-42A2-8A13-53CED882B07D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D650DF2-AD3A-42A2-8A13-53CED882B07D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +108,7 @@ Global
 		{9D012809-D9B8-40A9-88F3-BE5E07465113} = {55D3F155-294D-47C6-B1F4-2234BCEE918C}
 		{D0475AE3-E8CA-48D3-91C7-985F9A06C12D} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
 		{7D650DF2-AD3A-42A2-8A13-53CED882B07D} = {D0475AE3-E8CA-48D3-91C7-985F9A06C12D}
+		{D5DA5377-8F87-4118-81C0-ED0F6C4C27A6} = {D0475AE3-E8CA-48D3-91C7-985F9A06C12D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
