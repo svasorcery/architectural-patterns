@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Types;
-using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Utilities;
+using SvaSorcery.Patterns.Enterprise.Cache.Common.Types;
+using SvaSorcery.Patterns.Enterprise.Cache.Common.Utilities;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache
+namespace SvaSorcery.Patterns.Enterprise.Cache
 {
     public class ReplicatedCache<T> : CacheAccessor<T>, ICacheObservable<int, T> where T : IIdentifiable
     {

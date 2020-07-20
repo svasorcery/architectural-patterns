@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Types
+namespace SvaSorcery.Patterns.Enterprise.Cache.Common.Types
 {
     public interface IRepository<T> where T : IIdentifiable
     {

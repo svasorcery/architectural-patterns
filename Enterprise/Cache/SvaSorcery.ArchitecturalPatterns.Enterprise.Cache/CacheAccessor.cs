@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Types;
+using SvaSorcery.Patterns.Enterprise.Cache.Common.Types;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache
+namespace SvaSorcery.Patterns.Enterprise.Cache
 {
     public class CacheAccessor<T> : ICache<T> where T : IIdentifiable
     {

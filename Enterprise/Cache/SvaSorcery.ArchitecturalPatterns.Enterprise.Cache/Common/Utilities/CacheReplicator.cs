@@ -1,6 +1,6 @@
-﻿using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Types;
+﻿using SvaSorcery.Patterns.Enterprise.Cache.Common.Types;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Utilities
+namespace SvaSorcery.Patterns.Enterprise.Cache.Common.Utilities
 {
     public class CacheReplicator<T> : ICacheUpdateObserver<int, T> where T : IIdentifiable
     {

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Timers;
-using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Types;
-using SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Utilities;
+using SvaSorcery.Patterns.Enterprise.Cache.Common.Types;
+using SvaSorcery.Patterns.Enterprise.Cache.Common.Utilities;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache
+namespace SvaSorcery.Patterns.Enterprise.Cache
 {
     public class CollectedCache<T> : CacheAccessor<T> where T : IIdentifiable
     {

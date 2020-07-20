@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Timers;
 
-namespace SvaSorcery.ArchitecturalPatterns.Enterprise.Cache.Common.Utilities
+namespace SvaSorcery.Patterns.Enterprise.Cache.Common.Utilities
 {
     public class EventTimer
     {
