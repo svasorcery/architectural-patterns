@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using CalculatorWsdlService;
 
-namespace SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade.Controllers
+namespace SvaSorcery.Patterns.Distribution.RemoteFacade.Controllers
 {
     [ApiController]
     [Route("[controller]/[action]")]

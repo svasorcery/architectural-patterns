@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using CalculatorWsdlService;
 
-namespace SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade
+namespace SvaSorcery.Patterns.Distribution.RemoteFacade
 {
     public class Startup
     {

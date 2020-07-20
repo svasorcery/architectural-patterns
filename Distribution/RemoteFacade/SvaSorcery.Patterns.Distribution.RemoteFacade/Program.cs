@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace SvaSorcery.ArchitecturalPatterns.Distribution.RemoteFacade
+namespace SvaSorcery.Patterns.Distribution.RemoteFacade
 {
     public class Program
     {
