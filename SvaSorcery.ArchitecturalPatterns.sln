@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.ORM.IdentityMap", "Enterprise\ObjectRelationalMapping\SvaSorcery.Patterns.Enterprise.ORM.IdentityMap\SvaSorcery.Patterns.Enterprise.ORM.IdentityMap.csproj", "{8EA6E586-576F-43F6-B79B-F3DDDE7ADB70}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.ORM.LazyLoad", "Enterprise\ObjectRelationalMapping\SvaSorcery.Patterns.Enterprise.ORM.LazyLoad\SvaSorcery.Patterns.Enterprise.ORM.LazyLoad.csproj", "{C9AE0453-E3FA-461E-9265-4C8D710626DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -133,6 +135,10 @@ Global
 		{8EA6E586-576F-43F6-B79B-F3DDDE7ADB70}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EA6E586-576F-43F6-B79B-F3DDDE7ADB70}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EA6E586-576F-43F6-B79B-F3DDDE7ADB70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9AE0453-E3FA-461E-9265-4C8D710626DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AE0453-E3FA-461E-9265-4C8D710626DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AE0453-E3FA-461E-9265-4C8D710626DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AE0453-E3FA-461E-9265-4C8D710626DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -164,6 +170,7 @@ Global
 		{24A98A43-08D3-448A-B440-2ECE569BD753} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
 		{DAD7B6A3-7D38-4AB9-A095-B5B299F73255} = {24A98A43-08D3-448A-B440-2ECE569BD753}
 		{8EA6E586-576F-43F6-B79B-F3DDDE7ADB70} = {24A98A43-08D3-448A-B440-2ECE569BD753}
+		{C9AE0453-E3FA-461E-9265-4C8D710626DB} = {24A98A43-08D3-448A-B440-2ECE569BD753}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
