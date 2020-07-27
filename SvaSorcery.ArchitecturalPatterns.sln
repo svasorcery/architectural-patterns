@@ -77,6 +77,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands\SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands.csproj", "{7900A50D-4121-48B1-A9CC-5F0C13E4A0A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.Common.Views", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.Common.Views\SvaSorcery.Patterns.Enterprise.Presentation.Common.Views.csproj", "{4C494BEA-59A5-4627-8426-A7E813265292}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -179,6 +181,10 @@ Global
 		{7900A50D-4121-48B1-A9CC-5F0C13E4A0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7900A50D-4121-48B1-A9CC-5F0C13E4A0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7900A50D-4121-48B1-A9CC-5F0C13E4A0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C494BEA-59A5-4627-8426-A7E813265292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C494BEA-59A5-4627-8426-A7E813265292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C494BEA-59A5-4627-8426-A7E813265292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C494BEA-59A5-4627-8426-A7E813265292}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -219,6 +225,7 @@ Global
 		{0C51C85F-9AC7-4913-9873-4FC1A42ADF13} = {8C0E7B37-D4C0-4B26-9CFE-B19AF8FB6B62}
 		{51A0BEEE-83BD-4B18-9FC7-32458AD7A44F} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
 		{7900A50D-4121-48B1-A9CC-5F0C13E4A0A7} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
+		{4C494BEA-59A5-4627-8426-A7E813265292} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
