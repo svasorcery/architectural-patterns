@@ -1,0 +1,12 @@
+﻿@model Person
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2>
+        <small>@Model.Id</small>
+        @Model.FirstName @Model.LastName
+    </h2>
+    <p>@Model.Email</p>
+</div>

@@ -1,0 +1,26 @@
+﻿@model Person[]
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>FullName</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var person in Model)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.FirstName @person.LastName</td>
+                    <td>@person.Email</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,7 @@
+﻿@{
+    ViewData["Title"] = "Person list";
+}
+
+<h1>Persons</h1>
+
+@Html.RenderXml(ViewBag.Persons as string, "../SvaSorcery.Patterns.Enterprise.Presentation.Common.Views/Xslt/TableTemplate.xslt")
