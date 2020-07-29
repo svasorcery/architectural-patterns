@@ -79,9 +79,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterpr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Presentation.Common.Views", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.Common.Views\SvaSorcery.Patterns.Enterprise.Presentation.Common.Views.csproj", "{4C494BEA-59A5-4627-8426-A7E813265292}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.AppController", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.AppController\SvaSorcery.Patterns.Enterprise.Presentation.AppController.csproj", "{E7F2DBFA-F363-45A9-9454-243906092812}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Presentation.AppController", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.AppController\SvaSorcery.Patterns.Enterprise.Presentation.AppController.csproj", "{E7F2DBFA-F363-45A9-9454-243906092812}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.FrontController", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.FrontController\SvaSorcery.Patterns.Enterprise.Presentation.FrontController.csproj", "{D9A38421-3728-40CF-BF10-2A016585F115}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Presentation.FrontController", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.FrontController\SvaSorcery.Patterns.Enterprise.Presentation.FrontController.csproj", "{D9A38421-3728-40CF-BF10-2A016585F115}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.TransformView", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.TransformView\SvaSorcery.Patterns.Enterprise.Presentation.TransformView.csproj", "{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -197,6 +199,10 @@ Global
 		{D9A38421-3728-40CF-BF10-2A016585F115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9A38421-3728-40CF-BF10-2A016585F115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9A38421-3728-40CF-BF10-2A016585F115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -240,6 +246,7 @@ Global
 		{4C494BEA-59A5-4627-8426-A7E813265292} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 		{E7F2DBFA-F363-45A9-9454-243906092812} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 		{D9A38421-3728-40CF-BF10-2A016585F115} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
+		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
