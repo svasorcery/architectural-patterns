@@ -87,6 +87,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Presentation.TemplateView", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.TemplateView\SvaSorcery.Patterns.Enterprise.Presentation.TemplateView.csproj", "{92CE0F0C-8A09-4657-8F33-F3FD208AF8E7}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Presentation.TwoStepView", "Enterprise\Presentation\SvaSorcery.Patterns.Enterprise.Presentation.TwoStepView\SvaSorcery.Patterns.Enterprise.Presentation.TwoStepView.csproj", "{70432186-2592-488C-9B0E-E0D6A5894B1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -209,6 +211,10 @@ Global
 		{92CE0F0C-8A09-4657-8F33-F3FD208AF8E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92CE0F0C-8A09-4657-8F33-F3FD208AF8E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92CE0F0C-8A09-4657-8F33-F3FD208AF8E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70432186-2592-488C-9B0E-E0D6A5894B1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70432186-2592-488C-9B0E-E0D6A5894B1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70432186-2592-488C-9B0E-E0D6A5894B1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70432186-2592-488C-9B0E-E0D6A5894B1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -254,6 +260,7 @@ Global
 		{D9A38421-3728-40CF-BF10-2A016585F115} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 		{AE891D0E-04C3-45BF-AFFD-CE2DC38DDA36} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 		{92CE0F0C-8A09-4657-8F33-F3FD208AF8E7} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
+		{70432186-2592-488C-9B0E-E0D6A5894B1E} = {51A0BEEE-83BD-4B18-9FC7-32458AD7A44F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
