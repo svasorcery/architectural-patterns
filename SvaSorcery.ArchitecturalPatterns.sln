@@ -94,9 +94,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Session", "Session", "{7A9A
 		SvaSorcery.Patterns.Enterprise.Session.ClientSession.ts = SvaSorcery.Patterns.Enterprise.Session.ClientSession.ts
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Session.ServerSession", "Enterprise\Session\SvaSorcery.Patterns.Enterprise.Session.ServerSession\SvaSorcery.Patterns.Enterprise.Session.ServerSession.csproj", "{2BC98659-4AAE-4A7B-BC26-8CADBEF191DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Session.ServerSession", "Enterprise\Session\SvaSorcery.Patterns.Enterprise.Session.ServerSession\SvaSorcery.Patterns.Enterprise.Session.ServerSession.csproj", "{2BC98659-4AAE-4A7B-BC26-8CADBEF191DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Session.DatabaseSession", "Enterprise\Session\SvaSorcery.Patterns.Enterprise.Session.DatabaseSession\SvaSorcery.Patterns.Enterprise.Session.DatabaseSession.csproj", "{463C93B6-48B6-4517-BE45-EB3150180F2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Session.DatabaseSession", "Enterprise\Session\SvaSorcery.Patterns.Enterprise.Session.DatabaseSession\SvaSorcery.Patterns.Enterprise.Session.DatabaseSession.csproj", "{463C93B6-48B6-4517-BE45-EB3150180F2E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.LayerSupertype", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.LayerSupertype\SvaSorcery.Patterns.Enterprise.Base.LayerSupertype.csproj", "{27FE7193-2981-41D7-B8DC-641014C570BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -232,6 +236,10 @@ Global
 		{463C93B6-48B6-4517-BE45-EB3150180F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463C93B6-48B6-4517-BE45-EB3150180F2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463C93B6-48B6-4517-BE45-EB3150180F2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27FE7193-2981-41D7-B8DC-641014C570BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27FE7193-2981-41D7-B8DC-641014C570BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27FE7193-2981-41D7-B8DC-641014C570BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27FE7193-2981-41D7-B8DC-641014C570BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -281,6 +289,8 @@ Global
 		{7A9A1748-6CFE-4E13-85C5-CF0D9EFE78A7} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
 		{2BC98659-4AAE-4A7B-BC26-8CADBEF191DC} = {7A9A1748-6CFE-4E13-85C5-CF0D9EFE78A7}
 		{463C93B6-48B6-4517-BE45-EB3150180F2E} = {7A9A1748-6CFE-4E13-85C5-CF0D9EFE78A7}
+		{1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
+		{27FE7193-2981-41D7-B8DC-641014C570BE} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
