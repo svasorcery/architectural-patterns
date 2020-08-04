@@ -104,6 +104,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.Registry", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Registry\SvaSorcery.Patterns.Enterprise.Base.Registry.csproj", "{93232957-5436-44B4-B5AF-2AE84489E542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.ValueObject", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.ValueObject\SvaSorcery.Patterns.Enterprise.Base.ValueObject.csproj", "{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -246,6 +248,10 @@ Global
 		{93232957-5436-44B4-B5AF-2AE84489E542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93232957-5436-44B4-B5AF-2AE84489E542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93232957-5436-44B4-B5AF-2AE84489E542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -298,6 +304,7 @@ Global
 		{1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
 		{27FE7193-2981-41D7-B8DC-641014C570BE} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 		{93232957-5436-44B4-B5AF-2AE84489E542} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
+		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
