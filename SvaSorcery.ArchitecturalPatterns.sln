@@ -102,11 +102,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Base", "Base", "{1F03DBC8-B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.LayerSupertype", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.LayerSupertype\SvaSorcery.Patterns.Enterprise.Base.LayerSupertype.csproj", "{27FE7193-2981-41D7-B8DC-641014C570BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.Registry", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Registry\SvaSorcery.Patterns.Enterprise.Base.Registry.csproj", "{93232957-5436-44B4-B5AF-2AE84489E542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.Registry", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Registry\SvaSorcery.Patterns.Enterprise.Base.Registry.csproj", "{93232957-5436-44B4-B5AF-2AE84489E542}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.ValueObject", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.ValueObject\SvaSorcery.Patterns.Enterprise.Base.ValueObject.csproj", "{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.ValueObject", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.ValueObject\SvaSorcery.Patterns.Enterprise.Base.ValueObject.csproj", "{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.SpecialCase", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.SpecialCase\SvaSorcery.Patterns.Enterprise.Base.SpecialCase.csproj", "{18789ACD-908D-443A-99E7-2069BC0D68AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.SpecialCase", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.SpecialCase\SvaSorcery.Patterns.Enterprise.Base.SpecialCase.csproj", "{18789ACD-908D-443A-99E7-2069BC0D68AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.Plugin", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Plugin\SvaSorcery.Patterns.Enterprise.Base.Plugin.csproj", "{8826D63D-C1A1-4EF1-A230-B66F203E7556}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -258,6 +260,10 @@ Global
 		{18789ACD-908D-443A-99E7-2069BC0D68AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18789ACD-908D-443A-99E7-2069BC0D68AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18789ACD-908D-443A-99E7-2069BC0D68AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8826D63D-C1A1-4EF1-A230-B66F203E7556}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8826D63D-C1A1-4EF1-A230-B66F203E7556}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8826D63D-C1A1-4EF1-A230-B66F203E7556}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8826D63D-C1A1-4EF1-A230-B66F203E7556}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -312,6 +318,7 @@ Global
 		{93232957-5436-44B4-B5AF-2AE84489E542} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 		{1D09F0FC-FAF1-476D-9FF4-1AFD8649F679} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 		{18789ACD-908D-443A-99E7-2069BC0D68AD} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
+		{8826D63D-C1A1-4EF1-A230-B66F203E7556} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
