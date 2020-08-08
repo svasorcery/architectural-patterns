@@ -108,9 +108,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterpr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.SpecialCase", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.SpecialCase\SvaSorcery.Patterns.Enterprise.Base.SpecialCase.csproj", "{18789ACD-908D-443A-99E7-2069BC0D68AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.Plugin", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Plugin\SvaSorcery.Patterns.Enterprise.Base.Plugin.csproj", "{8826D63D-C1A1-4EF1-A230-B66F203E7556}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.Plugin", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.Plugin\SvaSorcery.Patterns.Enterprise.Base.Plugin.csproj", "{8826D63D-C1A1-4EF1-A230-B66F203E7556}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.Base.ServiceStub", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.ServiceStub\SvaSorcery.Patterns.Enterprise.Base.ServiceStub.csproj", "{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SvaSorcery.Patterns.Enterprise.Base.ServiceStub", "Enterprise\Base\SvaSorcery.Patterns.Enterprise.Base.ServiceStub\SvaSorcery.Patterns.Enterprise.Base.ServiceStub.csproj", "{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OfflineConcurrency", "OfflineConcurrency", "{014080CA-F2DB-499B-9ECF-B9B61B39B863}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvaSorcery.Patterns.Enterprise.OfflineConcurrency", "Enterprise\OfflineConcurrency\SvaSorcery.Patterns.Enterprise.OfflineConcurrency\SvaSorcery.Patterns.Enterprise.OfflineConcurrency.csproj", "{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -270,6 +274,10 @@ Global
 		{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -326,6 +334,8 @@ Global
 		{18789ACD-908D-443A-99E7-2069BC0D68AD} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 		{8826D63D-C1A1-4EF1-A230-B66F203E7556} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
 		{DE44751A-3D1D-40B8-BDD0-51AD516AEAC3} = {1F03DBC8-B3BE-40AE-9400-AD2C08D7DC67}
+		{014080CA-F2DB-499B-9ECF-B9B61B39B863} = {D9E12D80-52EF-4768-94D0-4AC98912C88B}
+		{78A06F6F-9D2C-4760-AFDC-D084C2B94FCB} = {014080CA-F2DB-499B-9ECF-B9B61B39B863}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A5BAD837-76BF-4480-B317-7525526A0C26}
