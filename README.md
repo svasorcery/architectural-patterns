@@ -1,21 +1,21 @@
 # Software Architectural Patterns
 
-## [Distributed Systems](distribution)
+## [Distributed Systems](Distribution)
 
-### [Micro-Services Architecture (MSA)](distribution/MSA)
+### [Micro-Services Architecture (MSA)](Distribution/MSA)
 
-* #### [API Gateway](distribution/MSA/api-gateway)
-* #### [Access Token](distribution/MSA/access-token)
+* #### [API Gateway](Distribution/MSA/ApiGateway)
+* #### [Access Token](Distribution/MSA/AccessToken)
 
-## [Enterprise](enterprise)
+## [Enterprise](Enterprise)
 
-### [Base](enterprise/base)
-### [Cache](enterprise/cache)
-### [DataAccess](enterprise/dataaccess)
-### [Domain](enterprise/domain)
-### [InputOutput](enterprise/inputoutput)
-### [ObjectRelationalMapping](enterprise/objectrelationalmapping)
-### [OfflineConcurrency](enterprise/offlineconcurrency)
-### [Presentation](enterprise/presentation)
-### [Resource](enterprise/resource)
-### [Session](enterprise/session)
+### [Base](Enterprise/Base)
+### [Cache](Enterprise/Cache)
+### [DataAccess](Enterprise/DataAccess)
+### [Domain](Enterprise/Domain)
+### [InputOutput](Enterprise/InputOutput)
+### [ObjectRelationalMapping](Enterprise/ObjectRelationalMapping)
+### [OfflineConcurrency](Enterprise/OfflineConcurrency)
+### [Presentation](Enterprise/Presentation)
+### [Resource](Enterprise/Resource)
+### [Session](Enterprise/Session)
