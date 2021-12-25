@@ -20,7 +20,7 @@
       "System.ServiceModel.Primitives, {System.ServiceModel.Primitives, 4.4.4}",
       "System.ServiceModel.Security, {System.ServiceModel.Security, 4.4.4}"
     ],
-    "targetFramework": "netcoreapp3.1",
+    "targetFramework": "net6.0",
     "typeReuseMode": "All"
   }
 }

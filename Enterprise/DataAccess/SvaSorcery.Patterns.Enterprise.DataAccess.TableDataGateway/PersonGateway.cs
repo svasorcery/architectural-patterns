@@ -39,14 +39,13 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.TableDataGateway
                 Table.Select($"Id = {id}").First()
                );
 
-        protected Person Map(DataRow row)
-            => new Person()
-            {
-                Id = (int)row["Id"],
-                FirstName = (string)row["FirstName"],
-                LastName = (string)row["LastName"],
-                Email = (string)row["Email"],
-            };
+        protected static Person Map(DataRow row) => new()
+        {
+            Id = (int)row["Id"],
+            FirstName = (string)row["FirstName"],
+            LastName = (string)row["LastName"],
+            Email = (string)row["Email"],
+        };
 
         protected DataRow Map(Person model)
         {

@@ -12,13 +12,12 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands
     public static class Extensions
     {
         public static void AddRevenueRecognitionHandlers(this IServiceCollection services)
-        {
-            services.AddSingleton<Gateway>(instance => new Gateway("Data Source=localhost; Initial Catalog=RevenueRecognitions; Integrated Security=True;"));
-            services.AddScoped<IQueryHandler<FindContract, RevenueContract>, FindContractHandler>();
-            services.AddScoped<IQueryHandler<FindRecognitions, IEnumerable<Money>>, FindRecognitionsHandler>();
-            services.AddScoped<ICommandHandler<CreateRecognition>, CreateRecognitionHandler>();
-            services.AddScoped<IQueryHandler<GetRecognizedRevenue, Money>, GetRecognizedRevenueHandler>();
-            services.AddScoped<ICommandHandler<CalculateRevenueRecognitions>, CalculateRevenueRecognitionsHandler>();
-        }
+            => services
+            .AddSingleton<Gateway>(instance => new Gateway("Data Source=localhost; Initial Catalog=RevenueRecognitions; Integrated Security=True;"))
+            .AddScoped<IQueryHandler<FindContract, RevenueContract>, FindContractHandler>()
+            .AddScoped<IQueryHandler<FindRecognitions, IEnumerable<Money>>, FindRecognitionsHandler>()
+            .AddScoped<ICommandHandler<CreateRecognition>, CreateRecognitionHandler>()
+            .AddScoped<IQueryHandler<GetRecognizedRevenue, Money>, GetRecognizedRevenueHandler>()
+            .AddScoped<ICommandHandler<CalculateRevenueRecognitions>, CalculateRevenueRecognitionsHandler>();
     }
 }

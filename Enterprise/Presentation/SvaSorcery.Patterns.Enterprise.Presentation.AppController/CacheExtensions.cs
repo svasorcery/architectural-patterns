@@ -8,11 +8,10 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class CacheExtensions
     {
         public static void AddCache(this IServiceCollection services)
-        {
-            services.AddScoped<CacheAccessor<Person>>();
-            services.AddScoped<DemandCache<Person>>();
-            services.AddScoped<CacheReplicator<Person>>();
-            services.AddScoped<ICache<Person>, ReplicatedCache<Person>>();
-        }
+            => services
+                .AddScoped<CacheAccessor<Person>>()
+                .AddScoped<DemandCache<Person>>()
+                .AddScoped<CacheReplicator<Person>>()
+                .AddScoped<ICache<Person>, ReplicatedCache<Person>>();
     }
 }

@@ -4,14 +4,14 @@ namespace SvaSorcery.Patterns.Enterprise.Base.SpecialCase
 {
     public class PersonExtensions : IPersonExtensions
     {
-        public Person NullPerson() => new Person()
+        public Person NullPerson() => new()
         {
             FirstName = "",
             LastName = "",
             Email = ""
         };
 
-        public Person RepositoryOwner() => new Person()
+        public Person RepositoryOwner() => new()
         {
             FirstName = "Vladimir",
             LastName = "Sva",

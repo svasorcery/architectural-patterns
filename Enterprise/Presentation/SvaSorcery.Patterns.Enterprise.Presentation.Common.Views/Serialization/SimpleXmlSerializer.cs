@@ -7,7 +7,7 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Views.Serialization
 {
     public class SimpleXmlSerializer
     {
-        public string Serialize(object obj, Encoding encoding)
+        public static string Serialize(object obj, Encoding encoding)
         {
             var xmlWriterSettings = new XmlWriterSettings()
             {
@@ -15,31 +15,21 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Views.Serialization
                 NamespaceHandling = NamespaceHandling.OmitDuplicates
             };
 
-            using (var stringWriter = new StringWriterWithEncoding(encoding))
-            using (var xmlWriter = XmlWriter.Create(stringWriter, xmlWriterSettings))
-            {
-                var ns = new XmlSerializerNamespaces();
-                ns.Add(string.Empty, string.Empty);
+            using var stringWriter = new StringWriterWithEncoding(encoding);
+            using var xmlWriter = XmlWriter.Create(stringWriter, xmlWriterSettings);
+            var ns = new XmlSerializerNamespaces();
+            ns.Add(string.Empty, string.Empty);
 
-                var serializer = new XmlSerializer(obj.GetType(), "");
-                serializer.Serialize(xmlWriter, obj, ns);
-                return stringWriter.ToString();
-            }
+            var serializer = new XmlSerializer(obj.GetType(), "");
+            serializer.Serialize(xmlWriter, obj, ns);
+            return stringWriter.ToString();
         }
     }
 
     public sealed class StringWriterWithEncoding : StringWriter
     {
         private readonly Encoding encoding;
-
-        public StringWriterWithEncoding(Encoding encoding)
-        {
-            this.encoding = encoding;
-        }
-
-        public override Encoding Encoding
-        {
-            get { return encoding; }
-        }
+        public StringWriterWithEncoding(Encoding encoding) => this.encoding = encoding;
+        public override Encoding Encoding => encoding;
     }
 }

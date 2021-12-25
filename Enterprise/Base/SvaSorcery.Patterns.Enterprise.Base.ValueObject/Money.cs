@@ -2,19 +2,16 @@
 
 namespace SvaSorcery.Patterns.Enterprise.Base.ValueObject
 {
-    public class Money
+    public record Money
     {
-        public decimal Amount { get; private set; }
+        public decimal Amount { get; }
         public Currency Currency { get; }
 
         public Money(decimal amount, Currency currency)
-        {
-            Currency = currency;
-            Amount = amount * currency.CentFactor;
-        }
+            => (Amount, Currency) = (amount * currency.CentFactor, currency);
 
         public Money NewMoney(decimal amount)
-            => new Money(amount, Currency);
+            => new(amount, Currency);
 
         public Money Add(Money value)
             => NewMoney(Amount + value.Amount);
@@ -28,12 +25,6 @@ namespace SvaSorcery.Patterns.Enterprise.Base.ValueObject
         public Money Divide(int factor, MidpointRounding rounding = MidpointRounding.AwayFromZero)
             => NewMoney(Math.Round(Amount / factor, rounding));
 
-        public bool Equals(Money other)
-            => CheckSameCurrency(other) && Amount == other.Amount;
-
-        private bool CheckSameCurrency(Money value)
-            => Currency.Name == value.Currency.Name;
-
         public Money[] Allocate(int parts)
         {
             var result = new Money[parts];
@@ -45,11 +36,14 @@ namespace SvaSorcery.Patterns.Enterprise.Base.ValueObject
             return result;
         }
 
-        public static Money Dollars(decimal amount) => new Money(amount, new Currency("USD", 2));
-        public static Money Roubles(decimal amount) => new Money(amount, new Currency("RUR", 2));
+        public static Money Dollars(decimal amount)
+            => new(amount, new Currency("USD", 2));
+
+        public static Money Roubles(decimal amount)
+            => new(amount, new Currency("RUR", 2));
     }
 
-    public class Currency
+    public record Currency
     {
         public string Name { get; }
         public int FractionDigits { get; }

@@ -1,6 +1,8 @@
 ﻿namespace SvaSorcery.Patterns.Enterprise.ORM.IdentityMap.Types
 {
-    public class DomainObject
+    public record DomainObject(int Id);
+
+    /*public class DomainObject
     {
         public int Id { get; protected set; }
 
@@ -12,5 +14,5 @@
 
         public override int GetHashCode()
             => 31 + Id ^ (Id >> 32);
-    }
+    }*/
 }

@@ -9,7 +9,7 @@ namespace SvaSorcery.Patterns.Enterprise.InputOutput.PagingIterator
         private readonly string _baseUrl = "https://api.github.com/search/repositories";
         private readonly HttpClient _httpClient;
         private int _totalSize;
-        private string _term;
+        private readonly string _term;
 
         public GithubSearchPagedIterator(string term)
         {

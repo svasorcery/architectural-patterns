@@ -43,7 +43,7 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TableModule
             }
         }
 
-        private decimal[] Allocate(decimal amount, int by)
+        private static decimal[] Allocate(decimal amount, int by)
         {
             decimal lowResult = amount / by;
             lowResult = decimal.Round(lowResult, 2);

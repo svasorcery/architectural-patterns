@@ -6,7 +6,7 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.UnitOfWork.Types
 {
     public abstract class MapperRegistry
     {
-        protected readonly Hashtable _loadedObjects = new Hashtable();
+        protected readonly Hashtable _loadedObjects = new();
 
         protected abstract SqlConnection DbConnection { get; }
         protected abstract string InsertString { get; }

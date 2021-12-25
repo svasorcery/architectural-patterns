@@ -20,14 +20,11 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Views.Serialization
                 ValidationType = ValidationType.DTD
             };
 
-            using (var reader = XmlReader.Create(new StringReader(xml), xmlSettings))
-            {
-                var writer = new StringWriter();
-                tranformObj.Transform(reader, args, writer);
+            using var reader = XmlReader.Create(new StringReader(xml), xmlSettings);
+            var writer = new StringWriter();
+            tranformObj.Transform(reader, args, writer);
 
-                var htmlString = new HtmlString(writer.ToString());
-                return htmlString;
-            }
+            return new(writer.ToString());
         }
     }
 }

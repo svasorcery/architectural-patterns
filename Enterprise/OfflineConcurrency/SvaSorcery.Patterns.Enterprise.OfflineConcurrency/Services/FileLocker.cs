@@ -3,7 +3,7 @@ using SvaSorcery.Patterns.Enterprise.OfflineConcurrency.Types;
 
 namespace SvaSorcery.Patterns.Enterprise.OfflineConcurrency.Services
 {
-    public class FileLocker : IFileLocker
+    public record FileLocker : IFileLocker
     {
         public string FilePath { get; private set; }
         public int Version { get; private set; }
@@ -41,9 +41,9 @@ namespace SvaSorcery.Patterns.Enterprise.OfflineConcurrency.Services
                 return defaultValue;
             }
 
-            _fileName = name.Substring(0, index);
+            _fileName = name[..index];
 
-            if (int.TryParse(name.Substring(index), out int version))
+            if (int.TryParse(name[index..], out int version))
             {
                 return version;
             }

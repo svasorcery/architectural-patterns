@@ -6,8 +6,6 @@ namespace Microsoft.Extensions.DependencyInjection
     public static class Extensions
     {
         public static void AddPersonPlugin(this IServiceCollection services)
-        {
-            services.AddScoped<IPersonExtensions, HttpContextUserPersonPlugin>();
-        }
+            => services.AddScoped<IPersonExtensions, HttpContextUserPersonPlugin>();
     }
 }

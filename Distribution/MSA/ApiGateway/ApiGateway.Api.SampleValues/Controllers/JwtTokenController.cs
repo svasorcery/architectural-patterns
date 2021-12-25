@@ -73,11 +73,8 @@ namespace ApiGateway.Api.SampleValues.Controllers
                     new Claim(ClaimsIdentity.DefaultNameClaimType, person.Username),
                     new Claim(ClaimsIdentity.DefaultRoleClaimType, person.Role)
                 };
-                ClaimsIdentity claimsIdentity =
-                new ClaimsIdentity(claims, "Token", ClaimsIdentity.DefaultNameClaimType,
-                    ClaimsIdentity.DefaultRoleClaimType);
 
-                return claimsIdentity;
+                return new (claims, "Token", ClaimsIdentity.DefaultNameClaimType, ClaimsIdentity.DefaultRoleClaimType);
             }
             
             return null;

@@ -8,12 +8,10 @@ namespace SvaSorcery.Patterns.Enterprise.Resource.ResourceTimer
         private readonly Timer _timer;
 
         public DatabaseConnectionTimer(TimeSpan span)
-        {
-            _timer = new Timer
+            => _timer = new()
             {
                 Interval = span.Milliseconds
             };
-        }
 
         public void Reset()
         {

@@ -36,22 +36,20 @@ namespace SvaSorcery.Patterns.Enterprise.InputOutput.PagingIterator
             using (var connection = new SqlConnection(_connectionString))
             {
                 command.Connection.Open();
-                using (var reader = command.ExecuteReader())
+                using var reader = command.ExecuteReader();
+                while (reader.Read())
                 {
-                    while (reader.Read())
+                    results[++index] = new HospitalScheduleSlot()
                     {
-                        results[++index] = new HospitalScheduleSlot()
-                        {
-                            Id = Guid.Parse(Convert.ToString(reader["id"])),
-                            Date = Convert.ToDateTime(reader["date"]),
-                            TimeFrom = TimeSpan.Parse(Convert.ToString(reader["timeFrom"])),
-                            TimeTo = TimeSpan.Parse(Convert.ToString(reader["timeTo"])),
-                            SpecId = Guid.Parse(Convert.ToString(reader["specId"])),
-                            PatientId = Guid.Parse(Convert.ToString(reader["idpatientId"])),
-                            DoctorId = Guid.Parse(Convert.ToString(reader["doctorId"])),
-                            RoomId = Guid.Parse(Convert.ToString(reader["roomId"]))
-                        };
-                    }
+                        Id = Guid.Parse(Convert.ToString(reader["id"])),
+                        Date = Convert.ToDateTime(reader["date"]),
+                        TimeFrom = TimeSpan.Parse(Convert.ToString(reader["timeFrom"])),
+                        TimeTo = TimeSpan.Parse(Convert.ToString(reader["timeTo"])),
+                        SpecId = Guid.Parse(Convert.ToString(reader["specId"])),
+                        PatientId = Guid.Parse(Convert.ToString(reader["idpatientId"])),
+                        DoctorId = Guid.Parse(Convert.ToString(reader["doctorId"])),
+                        RoomId = Guid.Parse(Convert.ToString(reader["roomId"]))
+                    };
                 }
             }
 

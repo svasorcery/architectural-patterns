@@ -32,9 +32,9 @@ namespace SvaSorcery.Patterns.Enterprise.Resource.ResourcePool
                 conn.Open();
                 return conn;
             }
-            catch (Exception ex)
+            catch
             {
-                throw ex;
+                throw;
             }
         }
 

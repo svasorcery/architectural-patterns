@@ -14,7 +14,7 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.ActiveRecord
         public DateTime BirthDate { get; set; }
 
         public string TableName => "Persons";
-        protected static DataTable Table;
+        private static DataTable Table;
 
         public Person()
         {
@@ -40,7 +40,7 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.ActiveRecord
         public string ShortName
             => LastName +
             (string.IsNullOrEmpty(FirstName) ? "" :
-            $" {FirstName.Substring(0, 1)}.");
+            $" {FirstName[..1]}.");
 
         public static IEnumerable<Person> GetAll()
             => Table.Select()
@@ -71,15 +71,14 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.ActiveRecord
                 Table.Select($"Id = {Id}").First()
                );
 
-        protected static Person Map(DataRow row)
-            => new Person
-            {
-                Id = (int)row["Id"],
-                FirstName = (string)row["FirstName"],
-                LastName = (string)row["LastName"],
-                Email = (string)row["Email"],
-                BirthDate = (DateTime)row["BirthDate"]
-            };
+        protected static Person Map(DataRow row) => new()
+        {
+            Id = (int)row["Id"],
+            FirstName = (string)row["FirstName"],
+            LastName = (string)row["LastName"],
+            Email = (string)row["Email"],
+            BirthDate = (DateTime)row["BirthDate"]
+        };
 
         protected static DataRow Map(Person model)
         {

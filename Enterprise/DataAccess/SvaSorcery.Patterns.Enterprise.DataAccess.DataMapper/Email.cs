@@ -8,7 +8,7 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.DataMapper
         public int Id { get; set; }
         public string Mail { get; set; }
 
-        protected static DataTable Table;
+        private static DataTable Table;
 
         public Email()
         {
@@ -31,12 +31,11 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.DataMapper
             row.EndEdit();
         }
 
-        protected static Email Map(DataRow row)
-            => new Email
-            {
-                Id = (int)row["ID"],
-                Mail = (string)row["MAIL"],
-            };
+        protected static Email Map(DataRow row) => new()
+        {
+            Id = (int)row["ID"],
+            Mail = (string)row["MAIL"],
+        };
 
         protected static DataRow Map(Email model)
         {

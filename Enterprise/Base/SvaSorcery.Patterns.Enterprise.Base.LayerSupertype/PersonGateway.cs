@@ -10,14 +10,13 @@ namespace SvaSorcery.Patterns.Enterprise.Base.LayerSupertype
         {
         }
 
-        protected override Person Map(DataRow row)
-            => new Person()
-            {
-                Id = (int)row["Id"],
-                FirstName = (string)row["FirstName"],
-                LastName = (string)row["LastName"],
-                Email = (string)row["Email"],
-            };
+        protected override Person Map(DataRow row) => new()
+        {
+            Id = (int)row["Id"],
+            FirstName = (string)row["FirstName"],
+            LastName = (string)row["LastName"],
+            Email = (string)row["Email"],
+        };
 
         protected override DataRow Map(Person model)
         {

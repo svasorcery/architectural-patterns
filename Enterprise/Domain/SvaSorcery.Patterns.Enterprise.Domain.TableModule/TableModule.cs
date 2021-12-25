@@ -4,7 +4,7 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TableModule
 {
     public class TableModule
     {
-        protected DataTable Table;
+        protected readonly DataTable Table;
 
         protected TableModule(DataSet dataSet, string tableName)
         {

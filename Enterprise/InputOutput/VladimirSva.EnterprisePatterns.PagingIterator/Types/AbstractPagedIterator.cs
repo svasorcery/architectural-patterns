@@ -31,7 +31,7 @@ namespace SvaSorcery.Patterns.Enterprise.InputOutput.PagingIterator.Types
 
             if (UseCache)
             {
-                if (!CachedPages.Keys.Contains(page))
+                if (!CachedPages.ContainsKey(page))
                 {
                     CachedPages[page] = GetPage(page);
                 }

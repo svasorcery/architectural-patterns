@@ -17,24 +17,20 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TransactionScript
 
         internal Task<int> ExecuteCommandAsync(string sqlExpression, params SqlParameter[] args)
         {
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                var command = new SqlCommand(sqlExpression, connection);
-                command.Parameters.AddRange(args);
-                command.Connection.Open();
-                return command.ExecuteNonQueryAsync();
-            }
+            using var connection = new SqlConnection(_connectionString);
+            var command = new SqlCommand(sqlExpression, connection);
+            command.Parameters.AddRange(args);
+            command.Connection.Open();
+            return command.ExecuteNonQueryAsync();
         }
 
         internal Task<SqlDataReader> ExecuteQueryAsync(string sqlExpression, params SqlParameter[] args)
         {
-            using (var connection = new SqlConnection(_connectionString))
-            {
-                var command = new SqlCommand(sqlExpression, connection);
-                command.Parameters.AddRange(args);
-                command.Connection.Open();
-                return command.ExecuteReaderAsync();
-            }
+            using var connection = new SqlConnection(_connectionString);
+            var command = new SqlCommand(sqlExpression, connection);
+            command.Parameters.AddRange(args);
+            command.Connection.Open();
+            return command.ExecuteReaderAsync();
         }
 
         internal async Task<IEnumerable<IDictionary<string, object>>> ReadQueryResultAsync(
@@ -46,15 +42,13 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TransactionScript
             {
                 var results = new List<IDictionary<string, object>>();
 
-                using (var reader = await ExecuteQueryAsync(sqlExpression, args))
+                using var reader = await ExecuteQueryAsync(sqlExpression, args);
+                while (reader.Read())
                 {
-                    while (reader.Read())
-                    {
-                        var item = new Dictionary<string, object>();
-                        foreach (var col in columnsMap)
-                            item.Add(col.Value, reader[col.Key]);
-                        results.Add(item);
-                    }
+                    var item = new Dictionary<string, object>();
+                    foreach (var col in columnsMap)
+                        item.Add(col.Value, reader[col.Key]);
+                    results.Add(item);
                 }
 
                 return results;
@@ -68,8 +62,8 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TransactionScript
         public Task<IEnumerable<IDictionary<string, object>>> FindRecognitionsForAsync(long contractId, DateTime recognizedAt)
             => ReadQueryResultAsync("SELECT amount FROM RevenueRecognitions WHERE contract = @contractId AND recognizedAt = @recognizedAt",
                 new Dictionary<int, string> { { 0, "@amount" } },
-                new SqlParameter("@contract", SqlDbType.BigInt) { Value = contractId },
-                new SqlParameter("@recognizedAt", SqlDbType.Date) { Value = recognizedAt.ToShortDateString() });
+                new("@contract", SqlDbType.BigInt) { Value = contractId },
+                new("@recognizedAt", SqlDbType.Date) { Value = recognizedAt.ToShortDateString() });
 
         public Task<IEnumerable<IDictionary<string, object>>> FindContractAsync(long contractId)
             => ReadQueryResultAsync("SELECT * FROM Contracts AS c, Products AS p WHERE c.Id = @contractId AND c.ProductoId = p.Id",
@@ -78,8 +72,8 @@ namespace SvaSorcery.Patterns.Enterprise.Domain.TransactionScript
 
         public Task InsertRecognitionAsync(long contractId, Money money, DateTime recognizedAt)
             => ExecuteCommandAsync("INSERT INTO RevenueRecognitions VALUES (@contractId, @amount, @recognizedAt)",
-                new SqlParameter("@contractId", SqlDbType.BigInt) { Value = contractId },
-                new SqlParameter("@amount", SqlDbType.Decimal) { Value = money.Amount },
-                new SqlParameter("@recognizedAt", SqlDbType.Date) { Value = recognizedAt.ToShortDateString() });
+                new("@contractId", SqlDbType.BigInt) { Value = contractId },
+                new("@amount", SqlDbType.Decimal) { Value = money.Amount },
+                new("@recognizedAt", SqlDbType.Date) { Value = recognizedAt.ToShortDateString() });
     }
 }

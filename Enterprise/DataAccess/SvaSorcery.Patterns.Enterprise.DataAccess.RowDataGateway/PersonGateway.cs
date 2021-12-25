@@ -11,7 +11,7 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.RowDataGateway
         public string LastName { get; set; }
         public string Email { get; set; }
 
-        protected static DataTable Table;
+        private static DataTable Table;
 
         public Person()
         {
@@ -47,14 +47,13 @@ namespace SvaSorcery.Patterns.Enterprise.DataAccess.RowDataGateway
                 Table.Select($"Id = {Id}").First()
                );
 
-        protected static Person Map(DataRow row)
-            => new Person
-            {
-                Id = (int)row["Id"],
-                FirstName = (string)row["FirstName"],
-                LastName = (string)row["LastName"],
-                Email = (string)row["Email"],
-            };
+        protected static Person Map(DataRow row) => new()
+        {
+            Id = (int)row["Id"],
+            FirstName = (string)row["FirstName"],
+            LastName = (string)row["LastName"],
+            Email = (string)row["Email"],
+        };
 
         protected static DataRow Map(Person model)
         {

@@ -26,33 +26,33 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands.Handlers
             if (contract.Type == "W")
             {
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt, contract.TotalRevenue));
+                    new(command.ContractId, contract.RecognizedAt, contract.TotalRevenue));
             }
             else if (contract.Type == "D")
             {
                 var allocation = contract.TotalRevenue.Allocate(3);
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt, allocation[0]));
+                    new(command.ContractId, contract.RecognizedAt, allocation[0]));
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt.AddDays(30), allocation[1]));
+                    new(command.ContractId, contract.RecognizedAt.AddDays(30), allocation[1]));
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt.AddDays(60), allocation[2]));
+                    new(command.ContractId, contract.RecognizedAt.AddDays(60), allocation[2]));
             }
             else if (contract.Type == "S")
             {
                 var allocation = contract.TotalRevenue.Allocate(3);
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt, allocation[0]));
+                    new(command.ContractId, contract.RecognizedAt, allocation[0]));
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt.AddDays(60), allocation[1]));
+                    new(command.ContractId, contract.RecognizedAt.AddDays(60), allocation[1]));
 
                 await _createRecognitionHandler.HandleAsync(
-                    new CreateRecognition(command.ContractId, contract.RecognizedAt.AddDays(90), allocation[2]));
+                    new(command.ContractId, contract.RecognizedAt.AddDays(90), allocation[2]));
             }
         }
     }

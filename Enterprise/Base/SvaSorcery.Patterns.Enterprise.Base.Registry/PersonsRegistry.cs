@@ -5,7 +5,7 @@ namespace SvaSorcery.Patterns.Enterprise.Base.Registry
 {
     public class PersonsRegistry
     {
-        public static PersonGateway _persons = new PersonGateway(new System.Data.DataSet());
+        public static readonly PersonGateway _persons = new(new System.Data.DataSet());
 
         public static Person GetPerson(int id)
             => _persons.Find(id);

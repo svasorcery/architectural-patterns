@@ -17,7 +17,7 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.TransformView.Controllers
         {
             var persons = PersonsRepository.GetAll();
 
-            var personsXml = _serializer.Serialize(persons, System.Text.Encoding.UTF8);
+            var personsXml = SimpleXmlSerializer.Serialize(persons, System.Text.Encoding.UTF8);
 
             ViewBag.Persons = personsXml;
 

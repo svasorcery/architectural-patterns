@@ -7,7 +7,7 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.UnitOfWork
     public class AlbumMapper : MapperRegistry
     {
         protected override SqlConnection DbConnection
-            => new SqlConnection("Data Source=localhost; Initial Catalog=Albums; Integrated Security=True;");
+            => new("Data Source=localhost; Initial Catalog=Albums; Integrated Security=True;");
 
         protected override string InsertString => "INSERT INTO Albums VALUES (@id, @title)";
         protected override string SearchString => "SELECT * FROM Albums WHERE AlbumId = @id";

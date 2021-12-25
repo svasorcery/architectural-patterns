@@ -3,17 +3,5 @@ using SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands.Models;
 
 namespace SvaSorcery.Patterns.Enterprise.Presentation.Common.Commands.Queries
 {
-    public class FindContract : IQuery<RevenueContract>
-    {
-        public long ContractId { get; }
-
-        protected FindContract()
-        {
-        }
-
-        public FindContract(long contractId)
-        {
-            ContractId = contractId;
-        }
-    }
+    public record FindContract(long ContractId) : IQuery<RevenueContract>;
 }

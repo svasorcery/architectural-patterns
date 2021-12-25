@@ -39,7 +39,7 @@ namespace SvaSorcery.Patterns.Enterprise.Presentation.TwoStepView.Controllers
         protected string RetrievePersonsAndSerialize()
         {
             var persons = PersonsRepository.GetAll();
-            return _serializer.Serialize(persons, System.Text.Encoding.UTF8);
+            return SimpleXmlSerializer.Serialize(persons, System.Text.Encoding.UTF8);
         }
     }
 }

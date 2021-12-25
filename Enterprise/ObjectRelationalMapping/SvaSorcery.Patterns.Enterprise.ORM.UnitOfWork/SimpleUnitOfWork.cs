@@ -8,9 +8,9 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.UnitOfWork
 {
     public class SimpleUnitOfWork : IUnitOfWork
     {
-        private readonly ArrayList _newObjects = new ArrayList();
-        private readonly ArrayList _dirtyObjects = new ArrayList();
-        private readonly ArrayList _removedObjects = new ArrayList();
+        private readonly ArrayList _newObjects = new();
+        private readonly ArrayList _dirtyObjects = new();
+        private readonly ArrayList _removedObjects = new();
         private static readonly LocalDataStoreSlot _thread = Thread.AllocateNamedDataSlot("thread");
 
         public void RegisterNew(DomainObject obj)
@@ -53,8 +53,9 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.UnitOfWork
         public void RegisterRemoved(DomainObject obj)
         {
             if (obj.Id == 0)
+            {
                 throw new ArgumentException("Id is null");
-
+            }
             if (_newObjects.Contains(obj))
             {
                 _newObjects.Remove(obj);
@@ -72,14 +73,11 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.UnitOfWork
 
         public void Commit()
         {
-            using (var transaction = new TransactionScope())
-            {
-                InsertNew();
-                UpdateDirty();
-                DeleteRemoved();
-
-                transaction.Complete();
-            }
+            using var transaction = new TransactionScope();
+            InsertNew();
+            UpdateDirty();
+            DeleteRemoved();
+            transaction.Complete();
         }
 
         public void Rollback()

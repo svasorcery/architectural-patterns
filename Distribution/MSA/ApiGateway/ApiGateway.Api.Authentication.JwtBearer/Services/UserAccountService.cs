@@ -8,10 +8,10 @@ namespace ApiGateway.Api.Authentication.JwtBearer.Services
 
     public class UserAccountService
     {
-        private readonly List<UserAccount> _users = new List<UserAccount>
+        private readonly List<UserAccount> _users = new()
         {
-            new UserAccount { Username = "svasorcery", Password = "gfhjkm123", Role = "admin" },
-            new UserAccount { Username = "user", Password = "user", Role = "user" }
+            new() { Username = "svasorcery", Password = "gfhjkm123", Role = "admin" },
+            new() { Username = "user", Password = "user", Role = "user" }
         };
 
         public Task<UserAccount> FindAsync(UserCredentials credentials)

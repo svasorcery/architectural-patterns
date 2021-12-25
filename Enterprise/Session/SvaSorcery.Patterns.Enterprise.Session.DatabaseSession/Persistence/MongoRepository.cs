@@ -7,12 +7,10 @@ namespace SvaSorcery.Patterns.Enterprise.Session.DatabaseSession.Persistence
 {
 	public class MongoRepository<TEntity> : IMongoRepository<TEntity> where TEntity : IIdentifiable
 	{
-		protected IMongoCollection<TEntity> Collection { get; }
+		protected readonly IMongoCollection<TEntity> Collection;
 
 		public MongoRepository(IMongoDatabase database, string collectionName)
-		{
-			Collection = database.GetCollection<TEntity>(collectionName);
-		}
+			=> Collection = database.GetCollection<TEntity>(collectionName);
 
 		public Task<bool> ExistsAsync(Expression<Func<TEntity, bool>> predicate)
 			=> Collection.Find(predicate).AnyAsync();

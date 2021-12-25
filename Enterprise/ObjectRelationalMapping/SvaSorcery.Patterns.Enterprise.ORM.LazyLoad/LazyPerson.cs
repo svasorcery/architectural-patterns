@@ -4,7 +4,7 @@ namespace SvaSorcery.Patterns.Enterprise.ORM.LazyLoad
 {
     public class LazyPerson
     {
-        private int _personId;
+        private readonly int _personId;
         private Person _person = null;
 
         public LazyPerson(int id)
